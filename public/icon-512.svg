@@ -1,0 +1,30 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4A359"/>
+      <stop offset="100%" stop-color="#B4843A"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo arredondado -->
+  <rect width="512" height="512" rx="120" fill="#121212"/>
+  <circle cx="256" cy="256" r="200" fill="url(#grad)" opacity="0.12"/>
+
+  <!-- Lâmina da navalha (esquerda) -->
+  <path d="M 150 180 L 210 256 L 150 330 L 110 330 L 60 256 L 110 180 Z" fill="#E8E8E8" filter="url(#shadow)"/>
+  <path d="M 150 180 L 210 256 L 150 330" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" opacity="0.6"/>
+
+  <!-- Cabo da navalha (direita) -->
+  <rect x="280" y="190" width="90" height="130" rx="22" fill="#2C2C2E"/>
+  <rect x="292" y="202" width="66" height="106" rx="16" fill="#1A1A1A"/>
+  <path d="M 280 256 L 370 256" stroke="#D4A359" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Detalhe dourado na lâmina -->
+  <path d="M 110 256 L 150 256" stroke="#D4A359" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Sombras sutis -->
+  <ellipse cx="256" cy="430" rx="140" ry="24" fill="#000" opacity="0.25"/>
+</svg>

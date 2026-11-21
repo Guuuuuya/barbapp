@@ -1,0 +1,21 @@
+{
+  "name": "Dominus Barber",
+  "short_name": "Dominus Barber",
+  "description": "Gestão de agendamentos para barbeiros e cabeleireiros",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#121212",
+  "theme_color": "#D4A359",
+  "id": "/",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "lifestyle"],
+  "lang": "pt-BR"
+}

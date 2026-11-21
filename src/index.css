@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #121212;
+  --color-card: #1E1E1E;
+  --color-border: #2C2C2E;
+  --color-gold: #D4A359;
+  --color-gold-hover: #C4944A;
+  --color-emerald: #2ECC71;
+  --color-emerald-hover: #27AE60;
+  --color-text: #FFFFFF;
+  --color-text-muted: #A0A0A0;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  color: #FFFFFF;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #2C2C2E;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3A3A3C;
+}
+
+.phone-shell {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #121212;
+  position: relative;
+  overflow: hidden;
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.glass-border {
+  border: 1px solid #2C2C2E;
+}
+
+.btn-gold {
+  background: #D4A359;
+  color: #121212;
+}
+.btn-gold:hover {
+  background: #C4944A;
+}
+.btn-gold:active {
+  background: #B4843A;
+}
+
+.btn-outline {
+  border: 1px solid #2C2C2E;
+  color: #FFFFFF;
+  background: transparent;
+}
+.btn-outline:hover {
+  background: #1A1A1A;
+  border-color: #3A3A3C;
+}
+
+.btn-emerald {
+  background: #2ECC71;
+  color: #121212;
+}
+.btn-emerald:hover {
+  background: #27AE60;
+}
+
+.tab-active {
+  color: #D4A359;
+}
+
+.card {
+  background: #1E1E1E;
+  border: 1px solid #2C2C2E;
+  border-radius: 16px;
+}
+
+.slot-occupied {
+  background: #2C2C2E;
+  color: #666666;
+  border-color: #3A3A3C;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.slot-blocked {
+  background: #2C2C2E;
+  color: #888888;
+  border-color: #3A3A3C;
+}
+.slot-available {
+  background: #1A1A1A;
+  border: 1px solid #2C2C2E;
+  color: #FFFFFF;
+}
+.slot-available:hover {
+  border-color: #D4A359;
+  background: #242424;
+}
+.slot-selected {
+  background: #D4A359;
+  color: #121212;
+  border-color: #D4A359;
+}
+
+.service-chip {
+  background: #1A1A1A;
+  border: 1px solid #2C2C2E;
+  color: #FFFFFF;
+  border-radius: 10px;
+}
+.service-chip.selected {
+  border-color: #D4A359;
+  background: #2A2418;
+  color: #FFFFFF;
+}
