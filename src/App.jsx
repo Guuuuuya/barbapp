@@ -13,6 +13,10 @@ import {
   ArrowRight,
   RefreshCw,
   ChevronDown,
+  LifeBuoy,
+  Mail,
+  MessageCircle,
+  Phone,
 } from 'lucide-react'
 
 const STORAGE_USER = 'navalha_user'
@@ -266,6 +270,7 @@ export default function App() {
             restaurar={restaurar}
           />
         )}
+        {tab === 'suporte' && <TelaSuporte />}
       </div>
 
       {/* Bottom Nav */}
@@ -276,6 +281,7 @@ export default function App() {
             { id: 'agendar', label: 'Agendar', icon: <PlusCircle size={20} /> },
             { id: 'horarios', label: 'Horários', icon: <Clock size={20} /> },
             { id: 'lucro', label: 'Lucro', icon: <ArrowRight size={20} /> },
+            { id: 'suporte', label: 'Suporte', icon: <LifeBuoy size={20} /> },
           ].map((t) => (
             <button
               key={t.id}
@@ -900,6 +906,54 @@ function PieChart2D({ data, total }) {
           </span>
         ))}
         {slices.length === 0 && <span className="text-xs text-[#666666]">Sem dados no período.</span>}
+      </div>
+    </div>
+  )
+}
+
+function TelaSuporte() {
+  return (
+    <div className="flex flex-col h-full p-4 pb-24">
+      <div className="mb-6">
+        <div className="flex items-center gap-2 mb-1">
+          <LifeBuoy size={20} className="text-[#D4A359]" />
+          <h2 className="text-lg font-bold">Suporte e Contato</h2>
+        </div>
+        <p className="text-xs text-[#A0A0A0]">Precisa de ajuda? Fale com a gente pelos canais abaixo.</p>
+      </div>
+
+      <div className="space-y-4">
+        <div className="card p-4">
+          <h3 className="text-sm font-bold mb-3 flex items-center gap-2"><MessageCircle size={16} className="text-[#D4A359]" /> WhatsApp</h3>
+          <p className="text-xs text-[#A0A0A0] mb-3">Atendimento rápido para dúvidas e suporte técnico.</p>
+          <a href="https://wa.me/55123456789" target="_blank" rel="noreferrer" className="btn-gold inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold">
+            <MessageCircle size={16} /> Chamar no WhatsApp
+          </a>
+        </div>
+
+        <div className="card p-4">
+          <h3 className="text-sm font-bold mb-3 flex items-center gap-2"><Mail size={16} className="text-[#D4A359]" /> E-mail</h3>
+          <p className="text-xs text-[#A0A0A0] mb-3">Para sugestões, parcerias ou problemas detalhados.</p>
+          <a href="mailto:suporte@dominusbarber.app" className="btn-outline inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium">
+            <Mail size={16} /> suporte@dominusbarber.app
+          </a>
+        </div>
+
+        <div className="card p-4">
+          <h3 className="text-sm font-bold mb-3 flex items-center gap-2"><Phone size={16} className="text-[#D4A359]" /> Telefone</h3>
+          <p className="text-xs text-[#A0A0A0] mb-3">Horário de atendimento: Seg a Sex, 09:00 às 18:00.</p>
+          <a href="tel:+55123456789" className="btn-outline inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium">
+            <Phone size={16} /> +55 12345-6789
+          </a>
+        </div>
+
+        <div className="card p-4">
+          <h3 className="text-sm font-bold mb-2">Sobre o Dominus Barber</h3>
+          <p className="text-xs text-[#A0A0A0] leading-relaxed">
+            Aplicativo de gestão para barbearias, 100% offline. Seus dados ficam salvos apenas no seu dispositivo.
+            Versão 1.0.0.
+          </p>
+        </div>
       </div>
     </div>
   )
