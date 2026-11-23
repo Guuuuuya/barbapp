@@ -274,7 +274,7 @@ export default function App() {
       </div>
 
       {/* Bottom Nav */}
-      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] px-4 pb-4 pt-2 z-50 [padding-bottom:env(safe-area-inset-bottom)]">
+      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] md:max-w-[720px] xl:max-w-[960px] px-4 pb-4 pt-2 z-50 [padding-bottom:env(safe-area-inset-bottom)]">
         <div className="bg-[#1E1E1E] border-t border-[#2C2C2E] rounded-3xl px-4 py-2.5 flex items-center justify-between shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
           {[
             { id: 'agenda', label: 'Agenda', icon: <Calendar size={20} /> },
@@ -475,7 +475,7 @@ function TelaAgenda({ appointments, setAppointments, schedule, selectedDay, setS
 
       <button
         onClick={onAgendar}
-        className="btn-gold fixed bottom-[90px] right-4 w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_25px_rgba(212,163,89,0.5)] z-40"
+        className="btn-gold fixed bottom-[90px] right-4 md:right-[calc(50%-360px+1rem)] xl:right-[calc(50%-480px+1rem)] w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_25px_rgba(212,163,89,0.5)] z-40"
       >
         <Plus size={22} />
       </button>

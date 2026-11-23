@@ -52,6 +52,20 @@ html, body, #root {
   overflow: hidden;
 }
 
+@media (min-width: 768px) {
+  .phone-shell {
+    max-width: 720px;
+    border-left: 1px solid #2C2C2E;
+    border-right: 1px solid #2C2C2E;
+  }
+}
+
+@media (min-width: 1280px) {
+  .phone-shell {
+    max-width: 960px;
+  }
+}
+
 .safe-top {
   padding-top: env(safe-area-inset-top);
 }
